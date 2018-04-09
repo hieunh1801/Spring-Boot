@@ -1,0 +1,9 @@
+/home/hieu/Downloads/Spring-Boot-AngularJS-Spring-Data-JPA-CRUD-App-Example-master/src/main/java/com/websystique/springboot/controller/RestApiController.java
+/home/hieu/Downloads/Spring-Boot-AngularJS-Spring-Data-JPA-CRUD-App-Example-master/src/main/java/com/websystique/springboot/SpringBootCRUDApp.java
+/home/hieu/Downloads/Spring-Boot-AngularJS-Spring-Data-JPA-CRUD-App-Example-master/src/main/java/com/websystique/springboot/util/CustomErrorType.java
+/home/hieu/Downloads/Spring-Boot-AngularJS-Spring-Data-JPA-CRUD-App-Example-master/src/main/java/com/websystique/springboot/controller/AppController.java
+/home/hieu/Downloads/Spring-Boot-AngularJS-Spring-Data-JPA-CRUD-App-Example-master/src/main/java/com/websystique/springboot/repositories/UserRepository.java
+/home/hieu/Downloads/Spring-Boot-AngularJS-Spring-Data-JPA-CRUD-App-Example-master/src/main/java/com/websystique/springboot/configuration/JpaConfiguration.java
+/home/hieu/Downloads/Spring-Boot-AngularJS-Spring-Data-JPA-CRUD-App-Example-master/src/main/java/com/websystique/springboot/service/UserServiceImpl.java
+/home/hieu/Downloads/Spring-Boot-AngularJS-Spring-Data-JPA-CRUD-App-Example-master/src/main/java/com/websystique/springboot/service/UserService.java
+/home/hieu/Downloads/Spring-Boot-AngularJS-Spring-Data-JPA-CRUD-App-Example-master/src/main/java/com/websystique/springboot/model/User.java
