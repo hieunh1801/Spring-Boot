@@ -10,9 +10,10 @@
 	<name>SpringBootCRUDApplicationExample</name>
 
 	<parent>
+		<!-- Lớp cha : Sau khi kế thừa thì ko cần khai báo các version cho các phiên bản phía dưới-->
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.3.RELEASE</version>
+		<version>1.4.3.RELEASE</version> <!--Khi dùng bản RELEASE thì không cần thêm kho chứa Respository -->
 	</parent>
 
 	<properties>
@@ -31,7 +32,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
-		<!-- Add JPA support -->
+		<!-- Add JPA support : Một loại thư viện hỗ trợ xử lý với database -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -47,7 +48,7 @@
 			<artifactId>h2</artifactId>
 			<version>${h2.version}</version>
 		</dependency>
-		<!-- Add MySQL database support [for running with PRODUCTION profile] -->		
+		<!-- Add MySQL database support [for running with PRODUCTION profile] : -->		
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -60,9 +61,8 @@
 	</dependencies>
 	<build>
 		<plugins>
-			<plugin><!-- Include if you want to make an executable jar[FAT JAR which 
-					includes all dependencies along with sprinboot loader] that you can run on 
-					commandline using java -jar NAME -->
+			<!-- Excuted jar : buile lại file dưới dạng file jar duy nhất-->
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
