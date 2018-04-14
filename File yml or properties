@@ -1,0 +1,22 @@
+---
+server:
+  port: 8080
+  contextPath: /plusplusc
+
+spring:
+  profiles: local,default
+datasource:
+  sampleapp:
+    url: jdbc:mysql://localhost:3306/plusplusc
+    username: root
+    password: 123456c@
+    driverClassName: com.mysql.jdbc.Driver
+    defaultSchema:
+    maxPoolSize: 20
+    hibernate:
+      hbm2ddl.method: update
+      show_sql: true
+      format_sql: true
+      dialect: org.hibernate.dialect.MySQLDialect
+
+
