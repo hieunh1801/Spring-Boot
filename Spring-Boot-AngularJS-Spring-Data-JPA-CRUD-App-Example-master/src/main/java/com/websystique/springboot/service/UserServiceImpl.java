@@ -18,30 +18,37 @@ public class UserServiceImpl implements UserService{
 	private UserRepository userRepository;
 
 	public User findById(Long id) {
+		// Tìm kiếm theo Id
 		return userRepository.findOne(id);
 	}
 
 	public User findByName(String name) {
+		// Tìm kiếm theo tên
 		return userRepository.findByName(name);
 	}
 
 	public void saveUser(User user) {
+		// Lưu
 		userRepository.save(user);
 	}
 
 	public void updateUser(User user){
+		// Cập nhật : ghi đè lại
 		saveUser(user);
 	}
 
 	public void deleteUserById(Long id){
+		// Xóa theo Id
 		userRepository.delete(id);
 	}
 
 	public void deleteAllUsers(){
+		// Xóa tất cả
 		userRepository.deleteAll();
 	}
 
 	public List<User> findAllUsers(){
+		// Trả về list User
 		return userRepository.findAll();
 	}
 

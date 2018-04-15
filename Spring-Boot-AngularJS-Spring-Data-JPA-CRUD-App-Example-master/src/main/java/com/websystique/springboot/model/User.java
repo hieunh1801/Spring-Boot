@@ -5,16 +5,16 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
-@Table(name="APP_USER")
+@Entity /*Entity : thực thể. Cho biết lớp này ánh xạ tới bảng trong Database*/
+@Table(name="APP_USER") // Tên table
 public class User implements Serializable{
-
-	@Id
+	/* Viết trên 1 dòng sẽ dễ hiểu hơn*/
+	@Id //Chú thích đây là Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private Long id;
 
-	@NotEmpty
-	@Column(name="NAME", nullable=false)
+	@NotEmpty // Chú thích các trường không được để trống
+	@Column(name="NAME", nullable=false) // Chú thích tên trường và không được để trống
 	private String name;
 
 	@Column(name="AGE", nullable=false)
@@ -23,6 +23,7 @@ public class User implements Serializable{
 	@Column(name="SALARY", nullable=false)
 	private double salary;
 
+	/* Getter và setter */
 	public Long getId() {
 		return id;
 	}
@@ -55,21 +56,31 @@ public class User implements Serializable{
 		this.salary = salary;
 	}
 
-	@Override
+
+	@Override /*Nạp chồng phương thức so sánh đối tượng*/
 	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
+		if (this == o) 
+		    return true;
+		if (o == null || getClass() != o.getClass())
+		    return false;
 
-		User user = (User) o;
+		User user = (User) o; // ép kiểu
 
-		if (Double.compare(user.salary, salary) != 0) return false;
-		if (id != null ? !id.equals(user.id) : user.id != null) return false;
-		if (name != null ? !name.equals(user.name) : user.name != null) return false;
+		if (Double.compare(user.salary, salary) != 0) 
+		    return false;
+		if (id != null ? !id.equals(user.id) : user.id != null)
+		    return false;
+		if (name != null ? !name.equals(user.name) : user.name != null) 
+			return false;
 		return age != null ? age.equals(user.age) : user.age == null;
 	}
 
-	@Override
+	@Override /*Nạp chồng phương thức hashCode */
 	public int hashCode() {
+		/*
+			- Hai đối tượng giống nhau phải có cùng hashCode
+			- Hai đối tượng khác nhau thì phải khác hashCode >> Khi đó sử dụng tới equals() để so sánh
+		*/
 		int result;
 		long temp;
 		result = id != null ? id.hashCode() : 0;
@@ -80,7 +91,7 @@ public class User implements Serializable{
 		return result;
 	}
 
-	@Override
+	@Override /*Nạp chồng phương thức toString*/
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", age=" + age
 				+ ", salary=" + salary + "]";
